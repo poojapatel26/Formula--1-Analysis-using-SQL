@@ -1,0 +1,63 @@
+-- Data Defination Language commands- Create table for Circuits, Drivers, Races , constructors, Constructor_results, Results 
+
+CREATE TABLE Circuits(
+   circuitId  INTEGER  NOT NULL PRIMARY KEY 
+  ,circuitRef VARCHAR(14) NOT NULL
+  ,name       VARCHAR(37) NOT NULL
+  ,location   VARCHAR(21) NOT NULL
+  ,country    VARCHAR(12) NOT NULL
+);
+
+CREATE TABLE Drivers(
+   driverId    INTEGER  NOT NULL PRIMARY KEY 
+  ,driverRef   VARCHAR(18) NOT NULL
+  ,number      VARCHAR(2) NOT NULL
+  ,code        VARCHAR(3) NOT NULL
+  ,forename    VARCHAR(17) NOT NULL
+  ,surname     VARCHAR(23) NOT NULL
+  ,nationality VARCHAR(17) NOT NULL
+);
+
+CREATE TABLE Races(
+ raceId  INTEGER  NOT NULL PRIMARY KEY,
+ year   varchar(4)   NOT NULL,
+ circuitId INTEGER NOT NULL, 
+ name varchar(80) NOT NULL,
+ date date NOT NULL,
+  foreign key (circuitId) references circuits (circuitId)
+		on delete cascade
+);
+
+CREATE TABLE constructors(
+  constructorId  INTEGER   NOT NULL PRIMARY KEY,
+  constructorRef varchar(30),
+  name varchar(20),
+  nationality varchar(30) 
+);
+
+CREATE TABLE Constructor_results(
+  constructorResultsId    INTEGER  NOT NULL PRIMARY KEY,
+  raceId   INTEGER NOT NULL,
+  constructorId    INTEGER   NOT NULL,
+  points varchar(7) NOT NULL,
+ foreign key (raceId) references races (raceId)
+		on delete cascade,
+ foreign key (constructorId) references Constructors (constructorId)
+		on delete cascade
+);
+
+CREATE TABLE Results(
+   resultId        INTEGER  NOT NULL PRIMARY KEY 
+  ,raceId          INTEGER  NOT NULL  
+  ,driverId        INTEGER  NOT NULL 
+  ,constructorId   INTEGER  NOT NULL 
+  ,number          Integer
+  ,position        VARCHAR(2) NOT NULL
+  ,points          NUMERIC(4,2) NOT NULL
+  ,rank            VARCHAR(2) NOT NULL,
+	foreign key (raceId) references Races(raceId) on delete cascade,
+	foreign key (driverId) references Drivers(driverId) on delete cascade,
+	foreign key (constructorId) references Constructors(constructorId) on delete cascade
+);
+
+

@@ -1,0 +1,293 @@
+-- Data Manipulation Language command
+
+-- TABLE Circuits
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (1,'albert_park','Albert Park Grand Prix Circuit','Melbourne','Australia');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (2,'sepang','Sepang International Circuit','Kuala Lumpur','Malaysia');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (3,'bahrain','Bahrain International Circuit','Sakhir','Bahrain');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (4,'catalunya','Circuit de Barcelona-Catalunya','Montmeló','Spain');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (5,'istanbul','Istanbul Park','Istanbul','Turkey');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (6,'monaco','Circuit de Monaco','Monte-Carlo','Monaco');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (7,'villeneuve','Circuit Gilles Villeneuve','Montreal','Canada');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (8,'magny_cours','Circuit de Nevers Magny-Cours','Magny Cours','France');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (9,'silverstone','Silverstone Circuit','Silverstone','UK');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (10,'hockenheimring','Hockenheimring','Hockenheim','Germany');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (11,'hungaroring','Hungaroring','Budapest','Hungary');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (12,'valencia','Valencia Street Circuit','Valencia','Spain');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (13,'spa','Circuit de Spa-Francorchamps','Spa','Belgium');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (14,'monza','Autodromo Nazionale di Monza','Monza','Italy');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (15,'marina_bay','Marina Bay Street Circuit','Marina Bay','Singapore');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (16,'fuji','Fuji Speedway','Oyama','Japan');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (17,'shanghai','Shanghai International Circuit','Shanghai','China');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (18,'interlagos','Autódromo José Carlos Pace','São Paulo','Brazil');
+
+INSERT INTO Circuits(circuitId,circuitRef,name,location,country) VALUES (19,'indianapolis','Indianapolis Motor Speedway','Indianapolis','USA');
+
+
+
+--TABLE Drivers
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (1,'hamilton',44,'HAM','Lewis','Hamilton','British');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (2,'heidfeld',NULL,'HEI','Nick','Heidfeld','German');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (3,'rosberg',6,'ROS','Nico','Rosberg','German');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (4,'alonso',14,'ALO','Fernando','Alonso','Spanish');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (5,'kovalainen',NULL,'KOV','Heikki','Kovalainen','Finnish');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (6,'nakajima',NULL,'NAK','Kazuki','Nakajima','Japanese');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (7,'bourdais',NULL,'BOU','Sébastien','Bourdais','French');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (8,'raikkonen',7,'RAI','Kimi','Räikkönen','Finnish');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (9,'kubica',88,'KUB','Robert','Kubica','Polish');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (10,'glock',NULL,'GLO','Timo','Glock','German');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (11,'sato',NULL,'SAT','Takuma','Sato','Japanese');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (12,'piquet_jr',NULL,'PIQ','Nelson','Piquet Jr.','Brazilian');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (13,'massa',19,'MAS','Felipe','Massa','Brazilian');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (14,'coulthard',NULL,'COU','David','Coulthard','British');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (15,'trulli',NULL,'TRU','Jarno','Trulli','Italian');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (16,'sutil',99,'SUT','Adrian','Sutil','German');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (17,'webber',NULL,'WEB','Mark','Webber','Australian');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (18,'button',22,'BUT','Jenson','Button','British');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (19,'davidson',NULL,'DAV','Anthony','Davidson','British');
+
+INSERT INTO Drivers(driverId,driverRef,number,code,forename,surname,nationality) VALUES (20,'vettel',5,'VET','Sebastian','Vettel','German');
+
+
+--TABLE Races
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (1,2009,1,'Australian Grand Prix','2009-03-29');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (2,2009,2,'Malaysian Grand Prix','2009-04-05');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (3,2009,17,'Chinese Grand Prix','2009-04-19');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (4,2009,3,'Bahrain Grand Prix','2009-04-26');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (5,2009,4,'Spanish Grand Prix','2009-05-10');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (6,2009,6,'Monaco Grand Prix','2009-05-24');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (7,2009,5,'Turkish Grand Prix','2009-06-07');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (8,2009,9,'British Grand Prix','2009-06-21');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (9,2009,9,'German Grand Prix','2009-07-12');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (10,2009,11,'Hungarian Grand Prix','2009-07-26');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (11,2009,12,'European Grand Prix','2009-08-23');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (12,2009,13,'Belgian Grand Prix','2009-08-30');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (13,2009,14,'Italian Grand Prix','2009-09-13');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (14,2009,15,'Singapore Grand Prix','2009-09-27');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (15,2009,15,'Japanese Grand Prix','2009-10-04');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (16,2009,18,'Brazilian Grand Prix','2009-10-18');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (17,2009,5,'Abu Dhabi Grand Prix','2009-11-01');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (18,2008,1,'Australian Grand Prix','2008-03-16');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (19,2008,2,'Malaysian Grand Prix','2008-03-23');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (20,2008,3,'Bahrain Grand Prix','2008-04-06');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (21,2008,4,'Spanish Grand Prix','2008-04-27');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (22,2008,5,'Turkish Grand Prix','2008-05-11');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (23,2008,6,'Monaco Grand Prix','2008-05-25');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (24,2008,7,'Canadian Grand Prix','2008-06-08');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (25,2008,8,'French Grand Prix','2008-06-22');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (26,2010,18,'Brazilian Grand Prix','2010-10-18');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (27,2011,5,'Abu Dhabi Grand Prix','2011-11-01');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (28,2011,1,'Australian Grand Prix','2011-03-16');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (29,2011,2,'Malaysian Grand Prix','2011-03-23');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (30,2015,3,'Bahrain Grand Prix','2015-04-06');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (31,2020,4,'Spanish Grand Prix','2020-04-27');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (32,2021,5,'Turkish Grand Prix','2021-05-11');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (33,2018,6,'Monaco Grand Prix','2018-05-25');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (34,2021,7,'Canadian Grand Prix','2021-06-08');
+
+INSERT INTO Races(raceId,year,circuitId,name,date) VALUES (35,2021,8,'French Grand Prix','2021-06-22');
+
+
+
+--TABLE constructors
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (1, 'mclaren', 'McLaren', 'British');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (2, 'bmw_sauber', 'BMW Sauber', 'German');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (3, 'williams', 'Williams', 'British');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (4,'renault','Renault', 'French');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (5, 'toro_rosso', 'Toro Rosso', 'Italian');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (6, 'ferrari', 'Ferrari', 'Italian');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (7, 'toyota', 'Toyota', 'Japanese');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (8, 'super_aguri',  'Super Aguri' ,  'Japanese');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (9, 'red_bull',  'Red Bull' ,  'Austrian');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (10, 'force_india', 'Force India',  'Indian');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (11, 'honda', 'Honda','Japanese');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (12, 'spyker','Spyker','Dutch');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (13, 'mf1','MF1','Russian');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (14, 'spyker_mf1', 'Spyker MF1','Dutch');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (15, 'sauber', 'Sauber','Swiss');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (16, 'bar',  'BAR' ,  'British');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (17, 'jordan','Jordan', 'Irish');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (18, 'minardi', 'Minardi' ,'Italian');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (19, 'jaguar', 'Jaguar','British');
+
+INSERT INTO constructors(constructorId,constructorRef,name,nationality) VALUES (20, 'prost', 'Prost' , 'French');
+
+
+--TABLE Constructor_results
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (1, 1,  1, 14);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (2, 2,  2, 8);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (3, 3,  3, 9);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (4, 4,  4, 5);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (5, 5,  5, 2);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (6, 6,  6, 1);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (7, 7,  7, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (8, 8,  8, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (9, 9,  9, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (10, 10,  10, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (11, 11,  11, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (12, 12,  12, 10);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (13, 13,  13, 11);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (14, 14,  14, 10);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (15, 15,  15, 5);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (16, 16,  16, 2);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (17, 17,  17, 1);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (18, 18,  18, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (19, 19,  19, 0);
+
+INSERT INTO constructor_results(constructorResultsId,raceId,constructorId,points) VALUES (20, 20,  20, 0);
+
+
+--TABLE Results
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (1, 1, 1, 1, 10,'1','+5.922','2');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (5, 2 , 2, 2, 8, '2','+5.478','3');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (7, 3, 3, 3, 6, '3','+8.163','5');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (11, 4, 4, 4, 5, '4','+17.181','7');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES(3, 5, 5, 5, 4,'8','+18.014','1');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (13, 6, 6, 6, 3,'9', '56.90','5');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (12, 1, 1, 1, 10,'6','+5.922','12');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (15, 2 , 2, 2, 8, '5','+5.478','13');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (17, 3, 3, 3, 6, '7','+8.163','15');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (111, 4, 4, 4, 5, '11','+17.181','17');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES(19, 5, 5, 5, 4,'13','+18.014','11');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (90, 6, 6, 6, 3,'15', '+45.88','8');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (21, 1, 1, 1, 10,'10','+5.922','9');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (25, 2 , 2, 2, 8, '12','+5.478','4');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (27, 3, 3, 3, 6, '14','+8.163','12');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (211, 4, 4, 4, 5, '20','+17.181','17');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES(23, 5, 5, 5, 4,'17','+18.014','8');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (29, 6, 6, 6, 3,'18', '11.89','9');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (41, 3, 1, 3, 6, '2','+8.163','1');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (42, 4, 1, 4, 5, '1','+17.181','1');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES(43, 5, 1, 5, 4,'1','+18.014','2');
+
+INSERT INTO Results(resultId,raceId,driverId,constructorId,number,position,points,rank) VALUES (44, 6, 1, 6, 3,'1', '11.89','1');
+

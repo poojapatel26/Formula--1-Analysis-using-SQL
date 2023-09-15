@@ -1,0 +1,17 @@
+-- CREATE VIEW and EXECUTE VIEW
+
+--Finding circuits that have Organized the races and its details
+Create View Circuit_Races_Organized as 
+	select r.name as "Grand Prix Name", 
+	   c.name as "Circuit Name", 
+	   c.location as "City", 
+	   c.country as "Country", 
+	   r.year as "Year",
+	   count(*) as "Races Organized" 
+	from circuits c, races r 
+	where r.circuitid = c.circuitid
+	group by "Grand Prix Name","Circuit Name","City","Country","Year"
+	order by "Races Organized","Year" desc;
+
+--Executing View
+select * from Circuit_Races_Organized;

@@ -1,0 +1,93 @@
+--SQL QUERIES with include aggregation functions and subquery.
+1) Aggregare function( sum(), min(), max(), avg(), count())
+2) Group by
+3) Order by
+4) Where
+5) DESC
+6) Cast
+7) concat
+8) Limit
+9) between
+10) IN
+11) Joins
+12) Sub query
+13) And, OR
+
+
+
+(count,groupby, orderby, where, desc)
+--Finding the locations that organized the maximum races
+select c.location as "City", count(r.circuitid) as "Races Organized" 
+from circuits c, races r 
+where r.circuitid = c.circuitid 
+group by "City" 
+order by "Races Organized" 
+desc;
+
+
+
+(cast, sum, innerjoin, groupby, having)
+--name of the Constructors who are having 10 or more total points of races
+select 
+	c.name as "Constructor", 
+	c.nationality, 
+	sum(CAST(points as integer)) as "Total Points" 
+from constructor_results r  
+inner join constructors c
+on c.constructorId = r.constructorId 
+group by c.name,c.nationality 
+having sum(CAST(points as integer))>= 10
+order by "Total Points" desc;
+
+
+
+(Concat, between, limit)
+--Number of races won by top 5 drivers
+select concat(d.forename,' ',d.surname) as "Driver Name", 
+count(r.driverId) as "Races Won"
+from drivers d, results r 
+where r.driverId = d.driverId and r.position between '1' and '3'
+group by "Driver Name" 
+order by "Races Won" desc  
+limit 5;
+
+
+
+(subquery, avg)
+-- name of the constructors whose total points is greater than average points
+Select c.name, r.points from constructors c
+inner join constructor_results r 
+on c.constructorid= r.constructorid 
+where Cast(r.points as integer) > (select avg(CAST(r.points as integer)) from constructor_results r)
+order by Cast(r.points as integer) desc
+
+
+
+(Min)
+--which driver got the minimum points
+Select d.forename as "Driver Name", min(r.points) as "Minimum Points"
+From drivers d, results r
+Where d.driverid = r.driverid
+group by d.forename
+order by "Minimum Points" desc
+
+
+
+(Max)
+--which Driver got the Maximum points
+Select d.forename as "Driver Name", max(r.points) as "Maximum Points"
+From drivers d, results r
+Where d.driverid = r.driverid
+group by d.forename
+order by "Maximum Points" desc
+
+
+
+(In, Like, And, OR)
+--Name of the constructors whose nationality is either British, German or Japanese
+select name as "Constructor Name", nationality as "Constructors Nationality"
+From constructors
+Where name IN ('McLaren', 'Williams') AND 
+	  nationality like 'British' OR 
+	  nationality like 'German' OR 
+	  nationality like 'Japanese'

@@ -1,0 +1,19 @@
+-- CREATE PROCEDURE and EXECUTE PROCEDURE
+
+-- Creating a Procedure which update constructor table's data
+Create OR REPLACE PROCEDURE UpdateConstructor (
+c_id INT,
+c_ref  varchar(30),
+c_name varchar(20),
+c_nationality varchar(20)
+)
+LANGUAGE plpgsql AS
+$$ BEGIN
+UPDATE constructors SET constructorRef = c_ref,
+name = c_name,
+nationality = c_nationality
+WHERE constructorId = c_id;
+END $$;
+
+-- calling procedure
+CALL UpdateConstructor(2,'porsche', 'Porsche', 'German')

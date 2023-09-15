@@ -1,0 +1,18 @@
+--CREATE FUNCTIONA and EXECUTE FUNCTION
+
+-- creating a function which automatically insert records into constructor table based on the value user passed
+
+CREATE OR REPLACE FUNCTION insertConstructorData(conRef VARCHAR, conName VARCHAR, conNationality VARCHAR)
+RETURNS void AS
+$$
+BEGIN
+--Insert a new record in using function
+INSERT INTO constructors(constructorRef,name,nationality) VALUES (conRef, conName, conNationality);
+END;
+$$
+LANGUAGE 'plpgsql';
+
+
+-- inserted data using function
+SELECT insertConstructorData('alfa', 'Alfa Romeo', 'Swiss');
+select * from constructors
